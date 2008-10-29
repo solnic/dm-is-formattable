@@ -1,0 +1,12 @@
+History.txt
+LICENSE
+Manifest.txt
+README.txt
+Rakefile
+TODO
+lib/dm-is-formattable.rb
+lib/dm-is-formattable/is/formattable.rb
+lib/dm-is-formattable/is/version.rb
+spec/integration/formattable_spec.rb
+spec/spec.opts
+spec/spec_helper.rb
