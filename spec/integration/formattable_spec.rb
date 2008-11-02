@@ -30,5 +30,19 @@ if HAS_SQLITE3 || HAS_MYSQL || HAS_POSTGRES
       page.content_formatted.should eql('<p><strong>strong text only</strong></p>')
     end
     
+    it 'should set custom names for properties' do
+      class Page2
+        include DataMapper::Resource
+        property :id, Serial
+        is :formattable, :format_property => :formatter, :source_property => :body, :result_property => :body_html
+      end
+      
+      page = Page2.new
+      
+      page.respond_to?(:formatter).should be(true)
+      page.respond_to?(:body).should be(true)
+      page.respond_to?(:body_html).should be(true)
+    end
+    
   end
 end

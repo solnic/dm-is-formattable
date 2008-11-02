@@ -10,7 +10,7 @@ AUTHOR = "Piotr Solnica"
 EMAIL  = "piotr [a] zenbe [d] com"
 GEM_NAME = "dm-is-formattable"
 GEM_VERSION = DataMapper::Is::Formattable::VERSION
-GEM_DEPENDENCIES = [["dm-core", GEM_VERSION]]
+GEM_DEPENDENCIES = [["dm-core", '0.9.7']]
 GEM_CLEAN = ["log", "pkg"]
 GEM_EXTRAS = { :has_rdoc => true, :extra_rdoc_files => %w[ README.txt LICENSE TODO ] }
 
@@ -18,7 +18,7 @@ PROJECT_NAME = "datamapper"
 PROJECT_URL  = "http://github.com/sam/dm-more/tree/master/dm-is-formattable"
 PROJECT_DESCRIPTION = PROJECT_SUMMARY = "Formatting engines support for DataMapper"
 
-#require ROOT.parent + 'tasks/hoe'
+require 'tasks/hoe'
 
 task :default => [ :spec ]
 

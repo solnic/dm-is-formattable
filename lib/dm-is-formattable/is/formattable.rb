@@ -22,12 +22,13 @@ module DataMapper
         extend  DataMapper::Is::Formattable::ClassMethods
         include DataMapper::Is::Formattable::InstanceMethods
         
-        options.merge!({ 
+        options = { 
           :by  => :textile,
           :format_property => :format_with, 
           :source_property => :content_original, 
-          :result_property => :content_formatted })
-      
+          :result_property => :content_formatted 
+        }.merge!(options)
+        
         @formattable_options = options
         
         property options[:source_property], DataMapper::Types::Text
