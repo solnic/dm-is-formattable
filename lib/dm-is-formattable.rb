@@ -4,7 +4,10 @@ require 'pathname'
 
 # Add all external dependencies for the plugin here
 gem 'dm-core', '=0.9.7'
+
 require 'dm-core'
+require 'dm-types'
+require 'redcloth'
 
 # Require plugin-files
 require Pathname(__FILE__).dirname.expand_path / 'dm-is-formattable' / 'is' / 'formattable.rb'
